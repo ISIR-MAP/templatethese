@@ -1,0 +1,305 @@
+#LyX file created by tex2lyx 2.1
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass book2
+\use_default_options false
+\maintain_unincluded_children false
+\language french
+\language_package default
+\inputencoding utf8
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 2
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\lang french
+
+\begin_inset VSpace -1cm*
+\end_inset
+
+ 
+\series bold
+Revues internationales avec comité de lecture
+\series default
+ : 
+\end_layout
+
+\begin_layout Enumerate
+
+\lang french
+
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+underline{Abrahamians, J.O}
+\end_layout
+
+\end_inset
+
+. and Sauvet, B. and Polesel-Maris, J. and Braive, R. and Régnier, S. 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\shape italic
+Nanorobotic system for in situ stiffness measurements on membranes
+\shape default
+. 
+\begin_inset Newline newline
+\end_inset
+
+ IEEE Transactions on Robotics (T-RO).
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%  2(3):24-37, 2012. 
+\backslash
+
+\backslash
+%DOI:10.4018/ijimr.2012070103
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\lang french
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%	
+\backslash
+item[2.]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%	 
+\backslash
+textit{Titre du papier}. 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%International Journal of (), 6(2):163-178, 2012. 
+\backslash
+textit{Pages to appear} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\lang french
+
+\series bold
+Communications avec actes (conférences internationales)
+\series default
+ : 
+\end_layout
+
+\begin_layout Enumerate
+
+\lang french
+
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+underline{Abrahamians, J.O}
+\end_layout
+
+\end_inset
+
+. and Sauvet, B. and Polesel-Maris, J. and Braive, R. and Régnier, S. 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\shape italic
+Robotic in Situ Stiffness Cartography of InP Membranes by Dynamic Force Sensing
+\shape default
+. 
+\begin_inset Newline newline
+\end_inset
+
+ IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2013.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\lang french
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+item[5.]  and Régnier, S. (20XX).
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% 
+\backslash
+textit{Titre du papier}. 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%  International Symposium of Optomechatronics Technologies (ISOT) 2011. 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

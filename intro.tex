@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pagestyle{fancy} \fancyhf{}
+\fancyhead[RE]{\nouppercase{\textit{\leftmark}}} 	% Right even
+\fancyhead[LO]{\nouppercase{\textit{\rightmark}}} % Left odd
+\fancyhead[LE]{\textbf{\thepage}}% 								% Left even
+\fancyhead[RO]{\textbf{\thepage}}% 								% Right odd
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{27.2pt}
+
+
+%%%%%%%%%%%%%%%%%%%% Page de couverture %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\input{couverture/couverture.tex}
+\end{titlepage}
+\cleardoublepage
+%\begin{titlepage}
+%\input{couverture/couverture.tex}
+%\end{titlepage}
+%\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%% Fin page de couverture %%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% Resume %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{resume/resume.tex}
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%% Fin de resume %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%% Remerciements %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Remerciements}
+\fancyhead[LE]{} 	% Right even
+ \fancyhead[RE]{\nouppercase{\textit{Remerciements}}} 	% Right even
+ \thispagestyle{empty}
+% 	\input{remerciements/remerciements.tex}
+ \cleardoublepage 
+ \fancyhead[RE]{\nouppercase{\textit{\leftmark}}} 	% Right even
+ \fancyhead[LE]{\textbf{\thepage}}% 								% Left even
+%%%%%%%%%%%%%%%%%%%% Fin de remerciements %%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\setcounter{page}{1}
+\pagenumbering{roman} %pour la numerotation des page en chiffres romains
+%
+{
+%%%%%%%%%%%%%%%%%%%% Table des matieres et des figures %%%%%%%%%%%%%%
+\setlength{\parskip}{0pt}
+\addcontentsline{toc}{chapter}{Table des matières}
+\tableofcontents
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Table des figures}
+\listoffigures
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%% Fin table des matieres et des figures %%%%%%%%%%%
+}
+
+
+
+\setcounter{page}{1}
+\pagenumbering{arabic}  %pour la numerotation des page en chiffres arabes
+

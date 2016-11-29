@@ -1,0 +1,433 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book2
+\use_default_options false
+\maintain_unincluded_children false
+\language french
+\language_package default
+\inputencoding utf8
+\fontencoding T1
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 2
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Etat de l'art
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "weill-duflos_optimizing_2015"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ Proin fringilla nisi nec lectus faucibus, id eleifend eros dignissim.
+ Curabitur ultricies dui ut ipsum porttitor, et fermentum diam lobortis.
+ Pellentesque ornare felis et enim molestie varius.
+ Ut neque lectus, lobortis eu venenatis et, iaculis at nulla.
+ Suspendisse dolor sem, vulputate eu volutpat vitae, semper in neque.
+ Cras cursus egestas lacinia.
+ Nunc eu tincidunt turpis, ut placerat nibh.
+ Nullam a urna eros.
+ Nunc odio ipsum, luctus et ligula vitae, iaculis iaculis ligula.
+ Fusce suscipit ultricies magna, id pretium enim rutrum eu.
+ Vestibulum vehicula eu nulla in elementum.
+ Nunc at convallis velit.
+ Mauris non arcu neque.
+ Integer eu mauris justo.
+ Sed sed enim et magna posuere eleifend.
+ Nam elementum varius est non maximus.
+\end_layout
+
+\begin_layout Standard
+Pellentesque a euismod nibh.
+ Vivamus erat urna, efficitur sit amet sapien consequat, interdum dignissim
+ dolor.
+ Pellentesque ornare lorem sit amet diam mollis, id eleifend arcu consectetur.
+ Pellentesque neque elit, mattis in leo ut, sagittis ultricies neque.
+ Fusce vel turpis lectus.
+ Curabitur dolor magna, viverra a sapien sit amet, gravida efficitur ante.
+ Suspendisse id libero id ante vehicula vulputate.
+ Integer consequat sed lectus nec tristique.
+ Aliquam erat volutpat.
+ Integer efficitur, elit vel tincidunt molestie, nulla purus consequat lorem,
+ vitae aliquam dolor lorem non nibh.
+ Etiam lobortis leo sed ipsum eleifend fermentum.
+ Vivamus auctor ultricies nisi, in efficitur lectus semper tincidunt.
+ Maecenas sodales felis eget augue fringilla, quis aliquet purus ultrices.
+\end_layout
+
+\begin_layout Standard
+Curabitur cursus viverra enim, et fermentum tortor bibendum non.
+ Vestibulum non pharetra diam, sed ultrices tortor.
+ Fusce eleifend efficitur eros, in semper justo porttitor vitae.
+ Ut et ligula convallis, tristique sem ac, facilisis libero.
+ Vestibulum quis posuere quam, lacinia varius dui.
+ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+ ridiculus mus.
+ Praesent maximus iaculis ipsum, ac cursus orci.
+ Quisque mattis mi neque, imperdiet auctor arcu posuere sagittis.
+ Mauris ut consectetur arcu.
+ Aliquam ornare quis erat sit amet pretium.
+ Cras euismod dignissim diam ut tempus.
+ Nunc lacus justo, posuere eu mauris sed, mattis ultricies libero.
+ Sed magna justo, varius a dapibus vel, pellentesque aliquet ipsum.
+ In iaculis volutpat nisl nec cursus.
+\end_layout
+
+\begin_layout Standard
+Etiam tempor porttitor vestibulum.
+ Pellentesque rhoncus tincidunt libero eu scelerisque.
+ Vivamus quis orci sit amet nisl elementum iaculis id et justo.
+ Duis vel mi et erat pellentesque semper ut in elit.
+ Sed nec congue magna.
+ Suspendisse quis rhoncus libero.
+ Fusce lacinia erat vel mi sagittis laoreet.
+ Donec ullamcorper quam sed libero gravida ultrices.
+ Sed auctor nibh justo, auctor vehicula mauris viverra laoreet.
+ In fermentum libero ac nulla mattis, vel commodo ligula dignissim.
+\end_layout
+
+\begin_layout Standard
+Donec vitae porttitor neque.
+ Aliquam finibus lobortis hendrerit.
+ Cras fringilla enim mauris, in bibendum risus cursus non.
+ Aliquam at lobortis nisl.
+ Aliquam id sem ac mi tempus porttitor quis id tortor.
+ Proin rutrum varius vehicula.
+ Cras viverra metus sed ultrices ultricies.
+ Sed facilisis sodales malesuada.
+ Cras commodo nunc at finibus mollis.
+ Donec a est ligula.
+\end_layout
+
+\begin_layout Standard
+Duis libero felis, facilisis non turpis non, mollis facilisis ante.
+ Morbi fringilla, est congue dignissim hendrerit, quam elit lacinia sapien,
+ quis cursus tortor ante eu erat.
+ Nam semper tellus id orci pharetra, a dapibus tortor aliquet.
+ In dictum lacus est.
+ Vestibulum eleifend fringilla lorem, mollis scelerisque risus hendrerit
+ sit amet.
+ Vivamus venenatis eu leo sit amet ornare.
+ Curabitur hendrerit pharetra purus, sed lacinia felis molestie ac.
+\end_layout
+
+\begin_layout Standard
+Donec auctor est bibendum magna tempus, ac porta mi pharetra.
+ In vel efficitur lorem.
+ Morbi accumsan erat ut tortor condimentum, at ornare nibh euismod.
+ Nam et lacus vel tellus rutrum auctor ut vel eros.
+ Nunc dapibus auctor hendrerit.
+ Mauris viverra lorem dolor, nec mollis libero interdum in.
+ Mauris at tortor nunc.
+ Vivamus et sem nunc.
+ Aenean hendrerit euismod vestibulum.
+ Donec tincidunt eget nulla eu mattis.
+ Ut nunc urna, facilisis at libero sit amet, vehicula condimentum risus.
+ Etiam velit mauris, porttitor in dapibus sit amet, dapibus nec libero.
+ Sed vel sem dignissim, euismod mauris nec, dapibus nisl.
+ Integer nec finibus lectus.
+\end_layout
+
+\begin_layout Standard
+Aliquam sit amet lorem ac elit blandit porta eget ac eros.
+ Morbi interdum hendrerit augue, id vehicula tortor suscipit in.
+ Curabitur neque nisi, sodales ut eros vel, sodales blandit nisi.
+ Etiam vulputate quis justo at elementum.
+ Proin volutpat mauris facilisis lectus fermentum laoreet.
+ Nunc euismod velit in lorem mollis, quis feugiat velit fringilla.
+ Nam pretium eu magna non ornare.
+ Integer vel libero diam.
+ Maecenas cursus consequat luctus.
+ In mollis imperdiet lectus id tempor.
+ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+ cubilia Curae; Cras dignissim elit ipsum, ut finibus est feugiat ut.
+ Praesent vel est vitae justo aliquet hendrerit vitae eu nunc.
+ Vestibulum quis est magna.
+ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+ cubilia Curae;
+\end_layout
+
+\begin_layout Standard
+Phasellus dapibus massa ut justo ornare facilisis.
+ Nam euismod pretium mauris nec gravida.
+ Morbi ullamcorper mollis mi, sed ullamcorper neque lacinia sit amet.
+ Interdum et malesuada fames ac ante ipsum primis in faucibus.
+ Sed fringilla, enim in ultricies gravida, nulla arcu iaculis eros, id vestibulu
+m dolor quam ac tellus.
+ Sed euismod velit at leo mollis mollis.
+ Aliquam vitae massa sit amet tortor accumsan placerat fringilla vitae augue.
+ Aenean faucibus, erat eget fringilla egestas, mauris risus faucibus erat,
+ non pellentesque felis sem in augue.
+\end_layout
+
+\begin_layout Standard
+Vivamus non tortor vel nisi hendrerit malesuada non eget nunc.
+ Nulla accumsan libero quis massa interdum, vel venenatis neque varius.
+ Nunc eu leo euismod, hendrerit neque quis, blandit nisl.
+ Vivamus maximus odio sapien, vel aliquet quam laoreet eu.
+ Ut bibendum tellus et ex convallis, nec lobortis nunc laoreet.
+ Sed quis rutrum metus, id venenatis ipsum.
+ Sed imperdiet erat id lorem commodo rutrum.
+ Proin pulvinar risus non nisl sagittis, id rhoncus ipsum ultricies.
+ Pellentesque id lacus sit amet ipsum egestas lacinia.
+ Sed vel euismod ipsum.
+ Suspendisse arcu risus, cursus vel malesuada at, vestibulum eget magna.
+ Curabitur placerat pulvinar dui vel congue.
+ Sed eget dui laoreet, imperdiet tortor eu, ultrices justo.
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ In tristique efficitur sapien, cursus semper ligula pharetra vel.
+ Cras non venenatis libero, ut vulputate dolor.
+\end_layout
+
+\begin_layout Standard
+Mauris vel placerat dui.
+ Duis pellentesque dapibus mauris, quis accumsan ligula ultrices id.
+ Nunc porttitor pellentesque felis eu blandit.
+ Nulla bibendum varius mollis.
+ Phasellus vehicula velit tincidunt sollicitudin egestas.
+ Fusce sem ante, commodo eu fringilla a, luctus non tellus.
+ Sed placerat mollis mi, vitae condimentum velit efficitur vel.
+ Morbi rhoncus tempor orci, ac hendrerit risus ornare sed.
+ Etiam nec interdum justo.
+ Cras tellus dolor, facilisis a accumsan vel, laoreet a ligula.
+ Integer eget faucibus augue.
+ Praesent velit lorem, ullamcorper a rhoncus a, malesuada a nisl.
+ Sed eget tortor eu dui feugiat fringilla.
+ Donec sit amet ligula convallis, tempus nibh condimentum, ultrices mi.
+\end_layout
+
+\begin_layout Standard
+Nulla non nisl blandit, aliquet nisi vitae, rutrum tellus.
+ Morbi enim eros, vehicula at felis vitae, venenatis commodo neque.
+ Pellentesque laoreet pharetra ultrices.
+ Vivamus quis arcu vitae tortor porta pharetra et at massa.
+ Phasellus commodo ultrices augue vel rutrum.
+ Quisque eu magna tempus metus porta convallis ut ut libero.
+ Nulla vehicula et quam in varius.
+ Pellentesque tellus nisi, mattis sed mattis eu, auctor quis felis.
+ Suspendisse scelerisque orci magna, ut consectetur metus efficitur eu.
+ Donec pretium lectus ipsum, id dictum felis eleifend a.
+ In consequat, sapien id dignissim mollis, justo eros molestie nunc, vitae
+ volutpat augue lacus quis lectus.
+ Donec sagittis libero quis tellus porta pretium.
+\end_layout
+
+\begin_layout Standard
+Etiam aliquet, erat ut iaculis elementum, ligula turpis blandit mauris,
+ sed malesuada mi nisl vitae sem.
+ Suspendisse congue velit ante.
+ Nulla ac odio ante.
+ Vestibulum justo justo, tempus nec egestas sit amet, convallis in justo.
+ Integer at tempus purus.
+ Integer sit amet scelerisque arcu.
+ Phasellus ut dapibus lectus.
+ Fusce eros libero, lobortis sed venenatis non, euismod in mauris.
+ Morbi malesuada turpis sit amet metus porta cursus.
+ Vestibulum quis pellentesque risus, in maximus lectus.
+ Sed vehicula finibus nisl congue tristique.
+ Praesent convallis metus at ante faucibus euismod.
+\end_layout
+
+\begin_layout Standard
+Donec scelerisque, purus eu consequat viverra, turpis nulla aliquet tortor,
+ sit amet aliquam eros justo id urna.
+ Proin finibus efficitur arcu eu placerat.
+ Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+ ac turpis egestas.
+ Suspendisse potenti.
+ Integer finibus odio a leo sagittis faucibus.
+ Praesent placerat feugiat mauris et interdum.
+ Nullam congue felis ut gravida pretium.
+ Mauris venenatis erat id auctor cursus.
+ Vestibulum lacus enim, ultricies tincidunt accumsan sit amet, condimentum
+ vel eros.
+\end_layout
+
+\begin_layout Standard
+Etiam id nisi et tortor tempor tristique sed et ipsum.
+ Interdum et malesuada fames ac ante ipsum primis in faucibus.
+ Nulla volutpat tincidunt massa, ut porttitor est.
+ Vestibulum non velit in metus porttitor ultricies at hendrerit mi.
+ Pellentesque id tempor tortor, et gravida mauris.
+ Donec vel accumsan elit.
+ Praesent ac volutpat lectus.
+ Proin non dapibus augue.
+ Vestibulum nec blandit nibh, congue hendrerit lectus.
+ Ut suscipit, metus vitae consectetur posuere, arcu mauris ornare turpis,
+ ut gravida ipsum odio eget lacus.
+ In ullamcorper purus placerat quam congue maximus.
+ Quisque quis nisi mauris.
+ Quisque et risus in eros semper porttitor et a nulla.
+ Cras at aliquam purus, feugiat aliquam nisi.
+ Nulla mauris nulla, fringilla eget dictum at, eleifend eu leo.
+ Sed dictum tellus eget lorem aliquam tempor.
+\end_layout
+
+\begin_layout Standard
+Etiam lacinia mollis lacinia.
+ Proin vestibulum mattis leo et convallis.
+ Aliquam vitae rhoncus urna.
+ Interdum et malesuada fames ac ante ipsum primis in faucibus.
+ Curabitur tortor purus, vehicula eu ullamcorper non, semper ut felis.
+ Pellentesque volutpat massa vitae magna ullamcorper, id congue leo bibendum.
+ Duis dictum mauris vitae arcu varius, quis venenatis sem mollis.
+ Duis faucibus nulla eget elit sollicitudin, nec viverra ligula feugiat.
+ Suspendisse potenti.
+ Nam dictum sagittis massa, et suscipit odio hendrerit at.
+ Maecenas in neque blandit, euismod augue id, placerat lectus.
+\end_layout
+
+\begin_layout Standard
+Curabitur vitae ornare lacus, et dictum est.
+ Pellentesque ullamcorper in tellus ut tristique.
+ Suspendisse sagittis ex metus, ac sodales est auctor eu.
+ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+ ridiculus mus.
+ Cras et ex id enim placerat pretium non vestibulum dolor.
+ Integer eu libero eget purus ullamcorper malesuada.
+ Etiam facilisis ultrices nisi, ut dictum urna aliquet ac.
+\end_layout
+
+\begin_layout Standard
+Cras tincidunt commodo sem.
+ Nullam vel semper lectus, eu euismod sem.
+ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+ cubilia Curae; Sed varius magna nec tempor laoreet.
+ Duis et metus lorem.
+ Aenean ac ullamcorper eros.
+ Integer molestie accumsan turpis, eget porttitor est consectetur sit amet.
+ Sed sed porttitor justo, sed euismod ante.
+\end_layout
+
+\begin_layout Standard
+Aenean fermentum sem nec odio eleifend porttitor.
+ Donec vel lectus at enim hendrerit faucibus sed non felis.
+ Maecenas non arcu tincidunt, sodales lacus quis, aliquam lectus.
+ In sollicitudin elit non tincidunt ultricies.
+ Donec lorem metus, vehicula in fermentum varius, pretium in arcu.
+ Suspendisse id tortor nibh.
+ Praesent finibus scelerisque ultricies.
+ Donec neque ante, tempor vitae fringilla non, varius ac ipsum.
+ Suspendisse vestibulum, metus ac consequat semper, tortor magna gravida
+ tellus, eu aliquam justo risus non odio.
+ Phasellus dignissim in velit id rhoncus.
+ Vestibulum mattis, dui molestie malesuada hendrerit, magna orci euismod
+ leo, eu ullamcorper velit massa eu urna.
+ Curabitur pharetra quis risus ut bibendum.
+ Sed eget nunc tristique, convallis sem id, ornare tellus.
+ In feugiat neque ac arcu sagittis, vitae vulputate mauris vehicula.
+\end_layout
+
+\begin_layout Standard
+Sed eget justo rhoncus nulla luctus tempus.
+ Nullam non aliquet dolor, id condimentum ex.
+ Phasellus id rutrum ligula.
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ Maecenas bibendum convallis tristique.
+ Aenean eget ligula eu orci placerat hendrerit.
+ Cras gravida nisi non metus bibendum, eu consequat arcu vulputate.
+ Sed tempor risus efficitur faucibus semper.
+\end_layout
+
+\begin_layout Standard
+Morbi quis blandit lorem.
+ In hac habitasse platea dictumst.
+ Morbi ex justo, dapibus vel mi vitae, ultricies congue mi.
+ Vestibulum ut felis ligula.
+ Vivamus varius, eros nec eleifend pulvinar, sem enim ultricies dui, non
+ fermentum tortor eros ac tortor.
+ Proin mattis dapibus molestie.
+ Sed accumsan eu ante at tempus.
+ Suspendisse fringilla, purus mollis molestie egestas, nunc justo pretium
+ eros, in lacinia nulla nibh sit amet tellus.
+ Sed porttitor a massa at fringilla.
+ Fusce sit amet velit a augue laoreet pharetra nec sed magna.
+\end_layout
+
+\begin_layout Standard
+In convallis sem consectetur diam sollicitudin dapibus.
+ Fusce eget maximus sem.
+ Aenean vel luctus ipsum.
+ Cras vulputate gravida ipsum, non pretium nibh maximus non.
+ Quisque eget lectus risus.
+ Nunc lacinia aliquet tortor, eget suscipit libero fermentum vel.
+ Sed vel nunc diam.
+ Proin vel feugiat turpis.
+ Curabitur ac neque viverra, accumsan felis tempor, consequat mi.
+ Proin at pulvinar orci.
+ Maecenas elementum, nulla quis euismod rhoncus, nisl massa fermentum felis,
+ nec egestas tellus massa vitae ligula.
+ Vivamus ac sem sem.
+ 
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,61 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,french,a4paper,twoside,11pt,latin9]{book2}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{these}
+\usepackage{eso-pic} % image de fond, a declarer avant graphicx
+%\usepackage{graphicx}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{amsfonts}
+\usepackage{color}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos}
+\usepackage{floatflt}
+\usepackage{supertabular}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{psfrag}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{setspace}
+\usepackage{mathrsfs}
+\usepackage{lscape}
+\usepackage{textcomp}
+\usepackage{enumerate} 	% Modification du style possible
+\usepackage{mathbbol} 	% pour les lettres avec des barres
+%\usepackage{subfig}
+\usepackage{subfigure} 	
+
+\makeatother
+
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\begin{document}
+\include{intro}
+
+\include{chapitre1/chapitre1}
+
+\include{chapitre2/chapitre2}
+
+\include{conclusion/conclusion}
+
+\bibliographystyle{plain}
+\bibliography{biblio/biblio}
+
+\end{document}

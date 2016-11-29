@@ -1,0 +1,575 @@
+% Package pour ecrire des theses francaises 
+%
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\typeout{}
+\typeout{Style these.sty B. DAUNAY 2007}
+\typeout{}
+
+%-------------------------------------------------------
+% Packages N�c�ssaires
+%-------------------------------------------------------
+\RequirePackage{latexsym} % anciens symboles latex
+\RequirePackage{amsthm}
+\RequirePackage{makeidx}
+\RequirePackage{calc}
+\RequirePackage{ifthen}
+\RequirePackage{float}
+\RequirePackage[french]{babel}
+\RequirePackage[utf8]{inputenc}
+
+%-------------------------------------------------------
+% Mise en page
+%-------------------------------------------------------
+
+\setlength{\hoffset}{0mm}
+\setlength{\textwidth}{160mm}
+\setlength{\marginparwidth}{0mm}
+\setlength{\evensidemargin}{-5mm}	% paire 2
+\setlength{\oddsidemargin}{5mm}	% impaire 12
+\setlength{\voffset}{-0mm}
+\setlength{\topmargin}{0mm}
+\setlength{\textheight}{230mm}
+\setlength{\parindent}{5.0mm}
+\setlength{\parskip}{12pt}
+
+% Modifi�
+
+% \setlength{\hoffset}{0mm}
+% \setlength{\textwidth}{170mm}
+% \setlength{\marginparwidth}{0mm}
+% \setlength{\evensidemargin}{-10mm}	% paire 2
+% \setlength{\oddsidemargin}{0mm}	% impaire 12
+% \addtolength{\voffset}{-10mm}
+% \setlength{\topmargin}{0mm}
+% \setlength{\textheight}{246mm}
+% \setlength{\parindent}{5.0mm}
+% \setlength{\parskip}{12pt}
+
+%\setlength{\hoffset}{0mm}
+%\setlength{\voffset}{0mm}
+%\setlength{\evensidemargin}{0mm}
+%\setlength{\topmargin}{0mm}
+%\setlength{\headsep}{0mm}
+%\setlength{\headheight}{0mm}
+%\setlength{\textheight}{250mm}
+%\setlength{\marginparsep}{170mm}
+%\setlength{\marginparwidth}{0mm}
+%\setlength{\marginparpush}{0mm}
+%\setlength{\textheight}{0mm}
+%\setlength{\textheight}{0mm}
+
+
+
+%-------------------------------------------------------
+% Gestion des overfull box
+%-------------------------------------------------------
+%\overfullrule=5pt
+\emergencystretch=6pt
+
+
+%-------------------------------------------------------
+%  Page de titre
+%-------------------------------------------------------
+\renewenvironment{titlepage}
+    {%
+      \cleardoublepage
+			\setlength{\hoffset}{0mm}
+			\setlength{\marginparwidth}{0mm}
+			\setlength{\oddsidemargin}{-2mm}		
+      \if@twocolumn
+        \@restonecoltrue\onecolumn
+      \else
+        \@restonecolfalse\newpage
+      \fi
+      \thispagestyle{empty}%
+      \setcounter{page}\@ne
+			
+			%\begin{minipage}{146mm}
+			\begin{center}	
+		}
+    {\end{center}	
+     %\end{minipage} 	
+     \if@restonecol\twocolumn \else \newpage \fi
+     \if@twoside\else
+        \setcounter{page}\@ne
+     \fi
+    }
+
+
+%-------------------------------------------------------
+%  Ent�te et pied de page
+%-------------------------------------------------------
+% dans \rightmark, il y a le nom de la section
+% dans \leftmark, il y a le nom du chapitre
+% dans \thepage, il y a le num�ro de page
+% -- Pour les premi�res pages des chapitres ou table des mati�res, des figures etc ... --
+\renewcommand{\ps@plain}{%
+\renewcommand{\@oddhead}{}%
+\renewcommand{\@evenhead}{}%
+\renewcommand{\@evenfoot}{\hfil\textbf{\thepage}\hfil}%
+\renewcommand{\@oddfoot}{\@evenfoot}%
+}
+% -- Pour les Cleardouble page --
+\renewcommand{\ps@headings}{%
+%\renewcommand{\@oddhead}{\parbox{\textwidth}{\textit{\rightmark}\hfill{\bf\thepage}\vspace{2mm}\hrule}}%
+%\renewcommand{\@evenhead}{\parbox{\textwidth}{{\bf\thepage}\hfill\textit{\leftmark}\vspace{2mm}\hrule}}%
+\renewcommand{\@oddhead}{}%
+\renewcommand{\@evenhead}{}%
+\renewcommand{\@evenfoot}{}%
+\renewcommand{\@oddfoot}{\@evenfoot}%
+}
+% -- Pour tous --
+\renewcommand{\chaptermark}[1]{\markboth{Chapitre \thechapter.~#1}{}} % remember chapter title
+\renewcommand{\sectionmark}[1]{\markright{\thesection~#1}}
+
+%% pour avoir une page vierge en fin de chapitre
+%% si elle est impaire
+\let\cleardoublepageori\cleardoublepage
+\renewcommand\cleardoublepage{%
+\newpage
+\thispagestyle{empty}
+\cleardoublepageori
+}
+%\let\origdoublepage\cleardoublepage
+%\newcommand{\clearemptydoublepage}{%
+%  \clearpage
+%  {\pagestyle{empty}\origdoublepage}%
+%}
+%\let\cleardoublepage\clearemptydoublepage
+
+%-------------------------------------------------------
+% Gestion de la numerotation des titres et TOC
+%-------------------------------------------------------
+\setcounter{tocdepth}{4}     % Profondeur de la table des matieres
+\setcounter{secnumdepth}{5}  % Profondeur de la numerotation dans le document.
+
+%-------------------------------------------------------
+% Ajout d'un paragraph dans la num�rotation
+%-------------------------------------------------------
+%il existe 7 niveaux predefinis en laTeX : part (-1) chapter (0) section (1)
+% subsection (2) subsubsection (3) paragraph (4) et subparagraph (5). 
+%nom
+\newcounter{subsubparagraph}
+%lien avec paragraph precedent
+\@addtoreset{subsubparagraph}{subparagraph}
+%redefinir la numerotation de la section  (par defaut, c'est juste le compteur) :
+\renewcommand{\thesubsubparagraph}{\thesubparagraph.\arabic{subsubparagraph}}
+%definir la nouvelle section : On utilise la macro \@startsection :
+\def\subsubparagraph{\@startsection%
+{subsubparagraph}%                     le nom choisi pour le compteur
+{6}%                                    le niveau de profondeur
+{\z@}%                                  l'indentation horizontale
+{3.25ex \@plus1ex \@minus.2ex}%         l'indentation avant la section (beforeskip) \baselineskip
+{-1em}%                                 l'indentation apres la section (afterskip)
+{\normalfont\normalsize\bfseries}}%     le style pour le nom de la section
+%Pour la \tableofcontents il faut definir l'indentation :
+\def\l@subsubparagraph{\@dottedtocline%
+{6}%                                    le niveau de profondeur
+{12em}%                                 l'espace laisse a gauche
+{5em}}%                                 la longueur du numero de section (i.e. \thesubsixsection)
+
+\def\subsubparagraphmark#1{}
+
+%-------------------------------------------------------
+% Math style
+%-------------------------------------------------------
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ora}{\overrightarrow}
+
+%%%%%%%%%%%%%%%%%% les nouvelles commandes %%%%%%%%%%
+\newcommand{\er}{\footnotesize $^{\mbox{er}}$\normalsize\ }
+\newcommand{\ere}{\footnotesize $^{\mbox{ère}}$\normalsize\ }
+\renewcommand{\ieme}{\footnotesize $^{\mbox{ème}}$\normalsize\ }
+
+
+\newcommand{\N}{{\mathbb {N}}}
+\newcommand{\Z}{{\mathbb {Z}}}
+\newcommand{\Q}{{\mathbb {Q}}}
+\newcommand{\R}{{\mathbb {R}}}
+\newcommand{\C}{{\mathbb {C}}}
+\newcommand{\K}{{\mathbb {K}}}
+\newcommand{\I}{{\mathbb {I}}}
+\newcommand{\F}{{\cal {F}}}
+\newcommand{\A}{{\cal {A}}}
+\newcommand{\D}{{\cal {D}}}
+\newcommand{\frefe}[1]{figure~\ref{fig:#1}}
+\newcommand{\srefe}[1]{paragraphe~\ref{sec:#1}}
+\newcommand{\erefe}[1]{équation~(\ref{eq:#1})}
+
+\newcommand{\proporefe}[1]{Proposition~\ref{propo:#1}}
+\newcommand{\proporef}{\proporefe}
+
+\newcommand{\proprirefe}[1]{Propriété~\ref{propri:#1}}
+\newcommand{\propriref}{\proprirefe}
+
+\newcommand{\hyporefe}[1]{Hypothèse~\ref{hypo:#1}}
+\newcommand{\hyporef}{\hyporefe}
+
+
+%\newcommand{\eerefe}[2]{équations~(\ref{eq:#1}) � (\ref{eq:#2})}
+
+\newcommand{\trefe}[1]{tableau~\ref{tab:#1}}
+\newcommand{\arefe}[1]{annexe~\ref{sec:#1}}
+\newcommand{\chaprefe}[1]{chapitre~\ref{sec:#1}}
+
+\newcommand{\fref}{\frefe}
+\newcommand{\sref}{\srefe}
+\newcommand{\eref}{\erefe}
+\newcommand{\eeref}{\eerefe}
+\newcommand{\tref}{\trefe}
+\newcommand{\aref}{\arefe}
+\newcommand{\chapref}{\chaprefe}
+
+\newcommand{\transp}{^{\mbox{\tiny \it T}}}
+\newcommand{\inv}{^{\mbox - 1}}
+
+\newcommand{\tr}{\text{tr}}
+\newcommand{\bRe}{\bR_e}
+\newcommand{\bRen}{\bR_{e_{\text{nom}}}}
+\newcommand{\gn}{g_{0_{\text{nom}}}}
+\newcommand{\bFi}{\bF_{\text{int}}}
+\newcommand{\bMi}{\bM_{\text{int}}}
+
+\newcommand{\docking}{\textit{docking }}
+\newcommand{\Virtuose}{\textit{Virtuose}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mHH}{\bH_{\text{h}}}
+\newcommand{\tHH}{$\bH_{\text{h}}$ }
+\newcommand{\mHL}{\bH_{\text{l}}}
+\newcommand{\tHL}{$\bH_{\text{l}}$ }
+
+\newcommand{\carbo}{carbone-$\alpha$}
+\newcommand{\carbos}{carbones-$\alpha$}
+
+\newcommand{\btau}{{\mbox{\boldmath $\tau$}}}
+\newcommand{\beps}{{\mbox{\boldmath $\varepsilon$}}}
+\newcommand{\ba}{{\bbf a}}
+\newcommand{\bb}{{\bbf b}}
+\newcommand{\bc}{{\bbf c}}
+\newcommand{\be}{{\bbf e}}
+\newcommand{\bcf}{{\bbf f}} % bold caractere f : pour les forces
+\newcommand{\tbf}{{\tilde{\bbf f}}}
+\newcommand{\hcf}{{\hat{\bbf f}}}
+%pour les moments
+\newcommand{\bcm}{{\bbf m}} % bold caractere m : pour les forces
+\newcommand{\tbm}{{\tilde{\bbf m}}}
+\newcommand{\hbm}{{\hat{\bbf m}}}
+%ou �a
+\newcommand{\bzero}{{\bbf 0}}
+\newcommand{\bO}{{\bbf O}}
+\newcommand{\bt}{{\bbf t}} % bold caractere t : pour les torques
+\newcommand{\tbt}{{\tilde{\bbf t}}}
+\newcommand{\hct}{{\hat{\bbf t}}}
+
+%\newcommand{\bg}{{\bm{g}}} % bold caractere g : pour Gravit�
+\newcommand{\bg}{{\bbf g}} % bold caractere g : pour Gravit�
+%\newcommand{\tbg}{{\tilde{\bbf g}}}
+\newcommand{\hbg}{{\hat{\bg}}}
+
+\newcommand{\bd}{{\bbf d}} % bold caractere d : pour Distance
+\newcommand{\tbd}{{\tilde{\bbf d}}}
+\newcommand{\hcd}{{\hat{\bbf d}}}
+
+\newcommand{\tcm}{\tilde{m}}% pour la masse estim�e
+\newcommand{\bnab}{{\mbox{\boldmath $\nabla$}}}
+\newcommand{\bomega}{{\mbox{\boldmath $\omega$}}}
+%\newcommand{\bV}{{\bbf V}}
+\newcommand{\bS}{{\bbf S}}
+\newcommand{\bX}{{\bbf X}}
+\newcommand{\bQ}{{\bbf Q}}
+\newcommand{\bM}{{\bbf M}}
+\newcommand{\bD}{{\bbf D}}
+\newcommand{\bI}{{\bbf I}}
+\newcommand{\bG}{{\bbf G}}
+\newcommand{\bJ}{{\bbf J}}
+\newcommand{\bT}{{\bbf T}}
+\newcommand{\bP}{{\bbf P}}
+\newcommand{\bZ}{{\bbf Z}}
+\newcommand{\bH}{{\bbf H}}
+\newcommand{\bY}{{\bbf Y}}
+\newcommand{\bR}{{\bbf R}}
+\newcommand{\bK}{{\bbf K}}
+\newcommand{\bA}{{\bbf A}}
+\newcommand{\bB}{{\bbf B}}
+\newcommand{\bC}{{\bbf C}}
+\newcommand{\bN}{{\bbf N}}
+\newcommand{\bF}{{\bbf F}}
+\newcommand{\bU}{{\bbf U}}
+\newcommand{\bV}{{\bbf V}}
+\newcommand{\bW}{{\bbf W}}
+\newcommand{\bw}{{\bbf w}}
+\newcommand{\bwe}{{\bbf{w}_e}}
+\newcommand{\btheta}{{\bbf{\Theta}}}
+\newcommand{\bE}{{\bbf E}}
+
+
+
+\newcommand{\hbG}{{\hat{\bbf G}}}
+\newcommand{\hbC}{{\hat{\bbf C}}}
+\newcommand{\tbB}{{\tilde{\bbf B}}}
+\newcommand{\tbG}{{\tilde{\bbf G}}}
+\newcommand{\tbC}{{\tilde{\bbf C}}}
+\newcommand{\tbK}{{\tilde{\bbf K}}}
+\newcommand{\tbY}{{\tilde{\bbf Y}}}
+\newcommand{\tbZ}{{\tilde{\bbf Z}}}
+\newcommand{\tbD}{{\tilde{\bbf D}}}
+
+\newcommand{\bv}{{\bbf v}}
+
+
+
+\newcommand{\bu}{{\bbf u}}
+\newcommand{\bq}{{\bbf q}}
+
+%\newcommand{\bw}{{\bbf w}}
+%\newcommand{\bbw}{{\bm w}}
+%\newcommand{\bV}{{\bm v}}
+
+%\newcommand{\bm}[1]{\mbox{\boldmath ${#1}$}}
+
+\newcommand{\bp}{{\bbf p}}
+\newcommand{\bx}{{\bbf x}}
+\newcommand{\by}{{\bbf y}}
+\newcommand{\bz}{{\bbf z}}
+\newcommand{\tbJ}{{\tilde{\bbf J}}}
+\newcommand{\tbv}{{\tilde{\bV}}}
+\newcommand{\tbw}{{\tilde{\bm w}}}
+\newcommand{\tbx}{{\tilde{\bbf x}}}
+\newcommand{\bbf}[1]{{\bf #1}}
+
+\newcommand{\bmat}[1]{{\begin{bmatrix} #1 \end{bmatrix}}} 
+\newtheorem{property}{Propriété}
+\newtheorem{hypothese}{Hypothèse}
+\newtheorem{remark}{Remarque}
+\newtheorem{proposition}{Proposition}
+%-------------------------------------------------------
+% Red�fintion de certain types d'environnement latex
+%-------------------------------------------------------
+
+\AtBeginDocument{%
+\renewenvironment{itemize}%
+{ \list{$\bullet$}%
+		{\setlength{\labelwidth}{30pt}%
+	 	 \setlength{\leftmargin}{35pt}%
+	   \setlength{\itemsep}{0pt}}}
+{ \endlist }
+}
+
+
+%-------------------------------------------------------
+% Commande utilisateur
+%-------------------------------------------------------
+
+% ignore le texte en parametre
+\newcommand{\ignore}[1]{} 
+% remarque, lors de l'ecriture de la these
+\newcommand{\rmq}[1]{{\noindent\texttt{\textbf{Remarque:}#1}}}
+% interdit les cesures
+\newcommand{\nohyphens}{\hyphenpenalty=10000\exhyphenpenalty=10000\relax}
+% insere une page blanche
+\newcommand{\whitepage}{\newpage\thispagestyle{empty}\addtocounter{page}{-1}~\vspace*{3cm}~\vfill~\newpage}
+% commentaire, lors de l'ecriture de la these
+\newcommand{\Comment}[1]{{\color{green} #1  \color{black}}}
+
+%-------------------------------------------------------
+% Theoremes , etc
+%-------------------------------------------------------
+
+\newtheorem{Definition}{Définition}%[chapter]
+%\@addtoreset{Definition}{}
+\newtheorem{Propriete}{Propriété}%[chapter]
+%\@addtoreset{Propriete}{}
+\newtheorem{Theoreme}{Théorème}%[chapter]
+\newtheorem{theorem}{Théorème}
+%\@addtoreset{Theoreme}{}
+\newtheorem{Corollaire}{Corollaire}%[chapter]
+%\@addtoreset{Corollaire}{}
+\newtheorem{Remarque}{Remarque}%[chapter]
+%\@addtoreset{Remarque}{}
+\newtheorem{Lemme}{Lemme}%[chapter]
+\@addtoreset{Lemme}{}
+%\@addtoreset{figure}{}
+\newtheorem{assumption}{Hypothèse}{\bf}{\it}
+
+
+% \newenvironment{algorithm}{%
+% \begin{Algorithme}%
+% }{%
+% %\hfill$\Box$\\%
+% \end{Algorithme}%
+% }
+% 
+
+\newenvironment{definition}{%
+\begin{Definition}%
+}{%
+%\hfill$\Box$\\%
+\end{Definition}%
+}
+
+\newenvironment{propriete}{%
+\begin{Propriete}%
+}{%    
+%\hfill$\Box$\\%
+\end{Propriete}%
+}
+
+\newenvironment{theoreme}{%
+\begin{Theoreme}%
+}{%
+%\hfill$\Box$\\%
+\end{Theoreme}%
+}
+
+\newenvironment{corollaire}{%
+\begin{Corollaire}%
+}{%
+%\hfill$\Box$\\%
+\end{Corollaire}%
+}
+
+\newenvironment{remarque}{%
+\begin{Remarque}%
+}{%  
+%\hfill$\Box$\\%
+\end{Remarque}%
+}
+
+\newenvironment{preuve}{%
+\paragraph{Preuve}%
+}{%
+%\hfill$\Box$\\%
+}
+
+%-------------------------------------------------------
+% Changer Fig. en Figure et TAB. en Tableau
+%-------------------------------------------------------
+
+\addto\captionsfrench{%
+ \renewcommand{\figurename}{{Figure}}} 
+\addto\captionsfrench{%
+ \renewcommand{\tablename}{{Tableau}}}
+\addto\captionsfrench{%
+\renewcommand{\subcaplabelfont@c}{\bfseries}} % Package subfigure, l�gende en gras
+\addto\captionsfrench{%
+\renewcommand{\subcapfont@s}{\itshape}} % Package subfigure, texte en italique
+
+%-------------------------------------------------------
+% Divers utilitaires pratiques
+%-------------------------------------------------------
+% sauve et restore le numero d'une footnote
+\newcommand{\footlab}[1]{\label{foot:#1}}
+\newcommand{\footref}[1]{\raisebox{1ex}{\footnotesize\protect\ref{foot:#1}}}
+\newcommand{\nomUniv}[1]{{#1}}
+\newcommand{\marque}[1]{{\textit{#1}}}
+\newcommand{\nomPropre}[1]{{#1}}
+\newcommand{\nomGB}[1]{{\textit{#1}}}
+\newcommand{\sigle}[1]{{{#1}}}
+\newcommand{\abbrev}[1]{{{#1}}}
+
+
+%-------------------------------------------------------
+%  style chapitre n�1
+%-------------------------------------------------------
+\def\@makechapterhead#1{%
+  \vspace*{20mm}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+				\rule{\textwidth}{.5pt}\\
+				\vskip 24\p@
+  	    \huge\bfseries \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 10\p@
+	    \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip -10\p@
+    \rule{\textwidth}{.5pt}
+    \vskip 60\p@
+  }}
+  
+%-------------------------------------------------------
+%  style chapitre n�2
+%-------------------------------------------------------
+
+%\makeatletter
+%\def\@makeschapterhead#1{%
+% \vspace*{10\p@}%
+% {\parindent \z@ \centering \reset@font
+%		\vspace*{10\p@}%
+%		\vspace*{10\p@}%
+%		\Huge \bfseries #1\par\nobreak
+%		\par
+%		\vspace*{10\p@}%
+%		\vskip 100\p@
+% }}
+%\renewcommand{\thechapter}{\Roman{chapter}}
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  %\vspace*{50\p@}%
+  \vspace*{40\p@}%
+  {\parindent \z@ \centering \reset@font
+        \thickhrulefill\quad
+         \@chapapp{} \thechapter
+        \quad \thickhrulefill
+        \par\nobreak
+        \vspace*{10\p@}%
+        \interlinepenalty\@M
+        \hrule
+        \vspace*{20\p@}%       
+        \Huge \bfseries #1\par\nobreak
+        \par
+        \vspace*{35\p@}%       
+        \hrule
+    %\vskip 40\p@
+    \vskip 90\p@
+  }}
+\def\@makeschapterhead#1{%
+ %\vspace*{50\p@}%
+ \vspace*{40\p@}%
+ {\parindent \z@ \centering \reset@font
+       \thickhrulefill
+       \par\nobreak
+       \vspace*{10\p@}%
+       \interlinepenalty\@M
+       \hrule
+       \vspace*{20\p@}%
+       \Huge  \bfseries #1\par\nobreak
+       \par
+       \vspace*{35\p@}%
+       \hrule
+   %\vskip 40\p@
+   \vskip 90\p@
+ }}
+
+
+
+%-------------------------------------------------------
+%  Bibliographie
+%-------------------------------------------------------
+
+%\renewcommand{\bibname}{R�f�rences}
+\renewenvironment{thebibliography}[1]
+     {\chapter*{\bibname}%
+      \@mkboth{\bibname}{\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+         	  \setlength{\itemsep}{6pt}%
+ 						\leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
